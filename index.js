@@ -24,10 +24,9 @@ var Adapter = module.exports = function(config) {
   this.config = config;
 
   // create connection string
-  var uri = config.db.url + config.db.name;
-  var sequelize = new Sequelize(uri, {
-    storage: config.db.name
-  });
+
+  console.log(JSON.stringify(config))
+  var sequelize = new Sequelize(config.db.database, config.db.username, config.db.password, config.db);
 
   this.User = sequelize.define('User', {
     // make id like CouchDB and MongoDB

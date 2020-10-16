@@ -1,10 +1,15 @@
 exports.dbs = {
   postgres: {
-    url: 'postgres://postgres:@127.0.0.1:5432/',
-    name: 'users',
-    collection: 'my_user_table'
+    username: 'dbuser',
+    password: null,
+    database: 'cloudarmy_test',
+    host: '127.0.0.1',
+    dialect: 'postgres',
+    minifyAliases: true,
+    logging: true,
+    collection: 'Lockit'
   },
-  mysql: {
+  /*mysql: {
     url: 'mysql://travis:@127.0.0.1:3306/',
     name: 'users',
     collection: 'my_user_table'
@@ -13,7 +18,7 @@ exports.dbs = {
     url: 'sqlite://',
     name: ':memory:',
     collection: 'my_user_table'
-  }
+  }*/
 };
 
 exports.signup = {
