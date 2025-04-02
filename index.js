@@ -25,7 +25,7 @@ var Adapter = module.exports = function(config) {
 
   // create connection string
 
-  console.log(JSON.stringify(config))
+  //console.log(JSON.stringify(config))
   var sequelize = new Sequelize(config.db.database, config.db.username, config.db.password, config.db);
 
   this.User = sequelize.define('User', {
